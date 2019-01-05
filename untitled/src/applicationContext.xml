@@ -34,6 +34,15 @@
         <!--<property name="sessionFactory" ref="sessionFactory" />-->
     <!--</bean>-->
     <!--<tx:annotation-driven transaction-manager="transactionManager" />-->
+    <bean id="baseDAO" class="dao.BaseDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="IUserDao" class="dao.impl.IUserDaoImp" parent="baseDAO"/>
 
+    <bean id="Login" class="action.LoginAction">
+        <property name="IUserDao" ref="IUserDao"/>
+    </bean>
 
 </beans>
