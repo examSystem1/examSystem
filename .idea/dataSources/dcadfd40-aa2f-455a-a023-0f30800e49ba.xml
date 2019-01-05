@@ -1113,5 +1113,210 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
+    <table id="280" parent="2" name="couchoose"/>
+    <table id="281" parent="2" name="cource"/>
+    <table id="282" parent="2" name="exam"/>
+    <table id="283" parent="2" name="topic"/>
+    <table id="284" parent="2" name="user"/>
+    <column id="285" parent="280" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="286" parent="280" name="Cno">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="287" parent="280" name="Uno">
+      <Position>3</Position>
+      <DataType>char(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="288" parent="280" name="Cno">
+      <ColNames>Cno</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="289" parent="280" name="Uno">
+      <ColNames>Uno</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="290" parent="280" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="291" parent="280" name="couchoose_ibfk_2">
+      <ColNames>Cno</ColNames>
+      <RefSchemaName>examsystem</RefSchemaName>
+      <RefTableName>cource</RefTableName>
+      <RefColNames>cno</RefColNames>
+    </foreign-key>
+    <foreign-key id="292" parent="280" name="couchoose_ibfk_1">
+      <ColNames>Uno</ColNames>
+      <RefSchemaName>examsystem</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>uno</RefColNames>
+    </foreign-key>
+    <column id="293" parent="281" name="Cno">
+      <Position>1</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="294" parent="281" name="Cname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="295" parent="281" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Cno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="296" parent="282" name="Eno">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="297" parent="282" name="Ename">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="298" parent="282" name="Cno">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="299" parent="282" name="Uno">
+      <Position>4</Position>
+      <DataType>char(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="300" parent="282" name="beginDate">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="301" parent="282" name="endDate">
+      <Position>6</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="282" name="Etime">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="303" parent="282" name="Cno">
+      <ColNames>Cno</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="304" parent="282" name="Uno">
+      <ColNames>Uno</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="305" parent="282" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Eno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="306" parent="282" name="exam_ibfk_2">
+      <ColNames>Cno</ColNames>
+      <RefSchemaName>examsystem</RefSchemaName>
+      <RefTableName>cource</RefTableName>
+      <RefColNames>cno</RefColNames>
+    </foreign-key>
+    <foreign-key id="307" parent="282" name="exam_ibfk_1">
+      <ColNames>Uno</ColNames>
+      <RefSchemaName>examsystem</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>uno</RefColNames>
+    </foreign-key>
+    <column id="308" parent="283" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="309" parent="283" name="Tname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="310" parent="283" name="choice">
+      <Position>3</Position>
+      <DataType>varchar(2555)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="311" parent="283" name="answer">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="312" parent="283" name="Cno">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="313" parent="283" name="Cno">
+      <ColNames>Cno</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="314" parent="283" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="315" parent="283" name="topic_ibfk_1">
+      <ColNames>Cno</ColNames>
+      <RefSchemaName>examsystem</RefSchemaName>
+      <RefTableName>cource</RefTableName>
+      <RefColNames>cno</RefColNames>
+    </foreign-key>
+    <column id="316" parent="284" name="Uno">
+      <Position>1</Position>
+      <DataType>char(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="317" parent="284" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="318" parent="284" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="319" parent="284" name="role">
+      <Position>4</Position>
+      <DataType>enum(&apos;1&apos;, &apos;2&apos;)|0e</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="320" parent="284" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Uno</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>
