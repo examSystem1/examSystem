@@ -20,7 +20,7 @@
     </tr>
     <tr>
       <td>
-       选择角色： <select value="user.role">
+       选择角色： <select name="user.role">
         <option value="老师">老师</option>
         <option value="学生">学生</option>
         </select>

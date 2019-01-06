@@ -4,19 +4,20 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import dao.IUserDao;
 import model.User;
+
 import java.util.Map;
 
 public class LoginAction extends ActionSupport {
     ActionContext context;
     private User user;
-    private IUserDao IUserDao;
+    private IUserDao iUserDao;
 
-    public IUserDao getIUserDao() {
-        return IUserDao;
+    public IUserDao getiUserDao() {
+        return iUserDao;
     }
 
-    public void setIUserDao(IUserDao IUserDao) {
-        this.IUserDao = IUserDao;
+    public void setiUserDao(IUserDao iUserDao) {
+        this.iUserDao = iUserDao;
     }
 
     public String execute() throws Exception{
@@ -29,7 +30,7 @@ public class LoginAction extends ActionSupport {
         User user1=null;
         user1=(User)session.get("user");
         if(user1==null){
-            user1 = IUserDao.validate(uno,pwd);
+            user1 = iUserDao.validate(uno,pwd);
             if(user1!=null){
                 session.put("user", user1);
                 validated=true;

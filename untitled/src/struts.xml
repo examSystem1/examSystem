@@ -8,7 +8,18 @@
     <package name="default" extends="struts-default">
         <action name="login" class="Login">
             <result name="success">main.jsp</result>
-            <result name="error">error.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="IExam" class="IExamAction" method="showExam">
+            <result name="success">editPaper.jsp</result>
+        </action>
+        <action name="addExam" class="IExamAction" method="addExam">
+            <result name="success">editTopic.jsp</result>
+            <result name="error">main.jsp</result>
+        </action>
+        <action name="addTopic" class="ITopicAction" method="addTopic">
+            <result name="success">editTopic.jsp</result>
+            <result name="error">main.jsp</result>
         </action>
     </package>
 </struts>

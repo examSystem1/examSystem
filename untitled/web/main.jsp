@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    success!
+    <a href="IExam.action">添加考试</a>
+    <a href="editTopic.jsp">添加题目</a>
 </body>
 </html>
