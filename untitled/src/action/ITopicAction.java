@@ -34,7 +34,7 @@ public class ITopicAction extends ActionSupport {
     }
 
     public String addTopic() {
-        topic.setCno("1");
+        topic.setCno(cno);
         // System.out.println("saveExam:" + cno);
         if(iTopicDao.addTopic(topic)) {
             return SUCCESS;
